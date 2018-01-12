@@ -13,7 +13,7 @@ onButtonPress() {
       
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .catch(() => {
-         thhs.setState({ error: 'Authentification Failed' }); 
+         this.setState({ error: 'Authentification Failed' }); 
         });
     });
 }
