@@ -8,6 +8,9 @@ state = { email:'', password: '', error: '' };
 
 onButtonPress() {
     const { email, password } = this.state;
+
+    this.setState({ error: ''});
+
     firebase.auth().signInWithEmailAndPassword(email, password)
     .catch(() => {
       
